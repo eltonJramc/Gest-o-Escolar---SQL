@@ -13,8 +13,12 @@ O sistema envolve a criação de diversas tabelas inter-relacionadas, como aluno
 
 -- As principais funcionalidades incluem:
 
--> Criação de tabelas para os diversos elementos do sistema escolar;
-
--> Criação, Inserção e Consulta de dados;
-
--> Relacionamento entre tabelas, utilizando chaves primárias e estrangeiras, garantindo a integridade referencial dos dados.
+-> Criação de tabelas.
+-> Inserção de dados.
+-> Relacionamento de tabelas com chaves primárias e estrangeiras.
+-> Operações de Agregação e Consulta.
+-> Manipulação de dados.
+-> Funções de Seleção.
+-> Exclusão de tabelas.
+-> Alteração de estrutura da tabela. 
+-> Controle de Integridade.
