@@ -14,11 +14,19 @@ O sistema envolve a criação de diversas tabelas inter-relacionadas, como aluno
 -- As principais funcionalidades incluem:
 
 -> Criação de tabelas.
+
 -> Inserção de dados.
+
 -> Relacionamento de tabelas com chaves primárias e estrangeiras.
+
 -> Operações de Agregação e Consulta.
+
 -> Manipulação de dados.
+
 -> Funções de Seleção.
+
 -> Exclusão de tabelas.
+
 -> Alteração de estrutura da tabela. 
+
 -> Controle de Integridade.
