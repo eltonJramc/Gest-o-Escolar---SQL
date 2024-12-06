@@ -4,7 +4,7 @@ CREATE TABLE Alunos (
   Data_Nascimento_Aluno DATE,
   Gênero_Aluno VARCHAR (100),
   Endereco_Aluno VARCHAR (150),
-  Telefone_Aluno VARCHAR (20)
+  Telefone_Aluno VARCHAR (20),
   Email_Aluno VARCHAR (255)
   );
   
@@ -13,7 +13,7 @@ CREATE TABLE Alunos (
    Nome_Professor VARCHAR (100),
    Data_Nascimento_Professor DATE,
    Gênero_Professor VARCHAR (100),
-   Telefone_Professor VARCHAR (20)
+   Telefone_Professor VARCHAR (20),
    Email_Professor VARCHAR (255)
   );
   
@@ -243,3 +243,20 @@ SELECT*FROM Disciplinas WHERE carga_horária_disciplina > 40;
 
 -- Buscar as notas que são maiores que 6 e menores que 8.
 SELECT*FROM Notas WHERE valor_nota >6 AND valor_nota<8;
+
+-- Retornar a média de Notas dos alunos em história.
+SELECT AVG(valor_nota) media FROM Notas WHERE id_disciplina = 2; 
+
+-- Retornar as informações dos alunos cujo Nome começa com 'A'.
+SELECT * FROM Alunos WHERE nome_aluno LIKE ('A%');
+
+-- Buscar apenas os alunos que fazem aniversário em fevereiro.
+SELECT * FROM Alunos WHERE STRFTIME('%m', data_nascimento_aluno) = '02';
+
+-- Realizar uma consulta que calcula a idade dos Alunos.
+SELECT 
+    Nome_Aluno,
+    Data_Nascimento_Aluno,
+    (strftime('%Y', CURRENT_DATE) - strftime('%Y', Data_Nascimento_Aluno)) - 
+    (strftime('%m-%d', CURRENT_DATE) < strftime('%m-%d', Data_Nascimento_Aluno)) AS idade
+FROM Alunos;
